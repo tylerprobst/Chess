@@ -14,7 +14,7 @@ class Player(object):
 	def print_pieces(self):  
 		idx = 1
 		for piece in self.pieces:
-			if piece.possible_moves() == []:
+			if piece.spot and piece.possible_moves() == []:
 				continue
 			print idx, ':', unicode(piece), piece.spot
 			idx += 1
