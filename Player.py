@@ -20,7 +20,7 @@ class Player(object):
 			idx += 1
 	
 	def select_piece(self): 
-		possible_pieces = filter(lambda x: x.possible_moves() != [], self.pieces)
+		possible_pieces = filter(lambda x: x.spot and x.possible_moves() != [], self.pieces)
 		selection = ''
 		while selection not in range(len(possible_pieces)+1):
 			try: #handles all errors
