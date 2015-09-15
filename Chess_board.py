@@ -52,4 +52,4 @@ class Board(object):
         flat_board = [val for sublist in self.grid for val in sublist]
         return flat_board
 
-        
+       

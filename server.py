@@ -5,7 +5,7 @@ from Game import *
 HOST = ''
 PORT = 4001
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #makes socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 sock.bind((HOST, PORT))
 sock.listen(1)

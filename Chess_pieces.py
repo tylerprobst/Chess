@@ -110,7 +110,8 @@ class Pawn(Piece):
     def possible_moves(self, check_king=True): #returns a list of the possible moves
         if self.first_move:
             poss_empty = map(self.get_spot, [[-1, 0], [-2, 0]])
-            #Refactor so this isnt changed when incheck is called, put in move()
+            if not self.board.spot_empty(poss_empty[0]):  
+                poss_empty = map(self.get_spot, [[-1, 0]])
         else:
             poss_empty = map(self.get_spot, [[-1, 0]])
         

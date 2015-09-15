@@ -1,7 +1,7 @@
 from Chess_board import *
 from Player import *
 import subprocess
-
+#HW: Fix bugs like being able to take your own color pieces 
 #HW: update player piece list if a piece is taken
 #HW: add a pieces lost for each player
 #HW: Queen me
@@ -39,3 +39,7 @@ class Game(object):
 		subprocess.call("clear", shell=True)
 		return
 
+# player2 = Player()
+# player1 = Player()
+# game = Game(player1, player2)
+# game.play() 
